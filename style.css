@@ -1,0 +1,97 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0, 0%, 90%);
+}
+
+#title-h1{
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: hsl(0, 0%, 25%);
+}
+
+#container{
+    background-color: gray;
+    border-radius: 100px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid;
+}
+#display{
+    font-size: 5rem;
+    font-family: monospace;
+    font-weight: 10;
+    text-shadow: 10px 10px 10px hsl(0, 0%, 10%);
+    margin-bottom: 80px;
+}
+#control button{
+    font-size: 1.25rem;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10px;
+    border:none;
+    min-width: 120px;
+    cursor:pointer;
+    transition: background-color 0.5s ease;
+    transition: transform 0.2 ease;
+    box-shadow: 3px 3px 3px hsl(0, 0%, 25%);
+    position: relative;
+    display:inline-block;
+    overflow: hidden;
+}
+
+
+#startbtn{
+    background-color: hsl(115, 75%, 45%);
+}
+#startbtn:hover{
+    background-color: hsl(115, 80%, 50%);
+}
+#startbtn:active{
+    transform: scale(0.94);
+}
+
+#stopbtn{
+    background-color: hsl(0, 75%, 45%);
+}
+#stopbtn:hover{
+    background-color: hsl(0, 80%, 50%);
+}
+#stopbtn:active{
+    transform: scale(0.94);
+}
+
+#resetbtn{
+    background-color: hsl(200, 75%, 45%);
+}
+#resetbtn:hover{
+    background-color: hsl(200, 80%, 50%);
+}
+#resetbtn:active{
+    transform: scale(0.94);
+}
+
+
+span{
+    position: absolute;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    pointer-events: none;
+    animation: animate 1s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
